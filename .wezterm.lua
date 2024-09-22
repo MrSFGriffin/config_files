@@ -2,8 +2,9 @@ local wezterm = require("wezterm")
 local config = wezterm.config_builder()
 
 config.color_scheme = "AdventureTime"
-config.default_prog = { "powershell" }
---config.font = wezterm.font("Mononoki Nerd Font")
+if wezterm.target_triple == "x86_64-pc-windows-msvc" then
+	config.default_prog = { "powershell" }
+end
 
 function config_pane_switching()
 	if config.keys == nil then
