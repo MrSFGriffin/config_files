@@ -30,6 +30,10 @@ function config_pane_switching()
 	end
 end
 
+config.enable_scroll_bar = true
+config.window_padding = {
+	right = "2cell",
+}
 config_pane_switching()
 
 return config
